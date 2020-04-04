@@ -18,9 +18,9 @@ then:
 参数示例 Parameter example ==>> 向user_table数据表增加一条'name'字段为'pon'的一行数据<br>
 `PG.save('user_table',{'name':'pon'},function (result){console.log(result)})`<br>
 ###### 2.删除数据库表中数据
-//@param tablename 数据表名称
-//@param fields 条件字段和值，json格式
-//@param cb 回调函数
+//@param tablename 数据表名称<br>
+//@param fields 条件字段和值，json格式<br>
+//@param cb 回调函数<br>
 `const PG = require('./pgsql/dbAPI');`<br>
 `PG.remove(tablename,fileds,cb)`<br>
 参数示例 Parameter example ==>> 删除user_table数据表中'name'字段为'pon'的数据<br>
