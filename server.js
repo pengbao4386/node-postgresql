@@ -32,3 +32,21 @@ app.get('/modify', function (req, res) {
     };
     pgClient.update('user_tab',oldVal,newVal,getResult);
 })
+
+// Example3 postgresql删除数据
+app.get('/remove', function (req, res) {
+    let deleteVal = {
+        'name':'lyx',
+        'id':3
+    };
+    pgClient.remove('user_tab',deleteVal,getResult);
+})
+
+// Example4 postgresql查询数据
+app.get('/select', function (req, res) {
+    let conditionFields = {
+        'name':'baopeng'
+    };
+    let resultFields = ['id','name','password'];
+    pgClient.select('user_tab', conditionFields, resultFields, getResult);
+})
